@@ -31,8 +31,10 @@ namespace EhzBattleServer.Controllers
     public string Post([FromBody] string value)
     {
       //{ "login":"rusal","password":"123"}
+      LoginClass lg = new() { login = "rusal", password = "123" };
 
       string token = "secret code";
+      return value;
       return token;
     }
 
