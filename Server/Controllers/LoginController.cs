@@ -21,21 +21,20 @@ namespace EhzBattleServer.Controllers
       return new string[] { "value1", "value2" };
     }
 
-    // GET api/<LoginController>/5
-    [HttpGet("{id}")]
-    public string Get(int id)
-    {
-      return "status";
-    }
+    //// GET api/<LoginController>/5
+    //[HttpGet("{id}")]
+    //public string Get(int id)
+    //{
+    //  return "status";
+    //}
 
     // POST api/<LoginController>
     [HttpPost]
     public string Post(LoginClass reciveData)
     {
       //{ "login":"rusal","password":"123", "token":""}
-      LoginClass lg = new() { login = "rusal", password = "123" };
-      string CheckToken  = lg.GetMD5(lg.password);
-      string token = lg.GenToken();
+
+      string token = reciveData.GenToken(); /////
       Console.WriteLine(reciveData);
       //return value;
       return token;
