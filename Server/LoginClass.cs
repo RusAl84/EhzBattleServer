@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EhzBattleServer
-{
-  
+ 
   [Serializable]
   public class LoginClass
   {
@@ -44,5 +42,33 @@ namespace EhzBattleServer
       byte[] key = Guid.NewGuid().ToByteArray();
       return  Convert.ToBase64String(time.Concat(key).ToArray());
     }
+
+    public override string ToString()
+    {
+      return String.Format($"login:{login} password:{password} token:{token}");
+    }
   }
-}
+  [Serializable]
+  public class LoginMasClass
+  {
+     public List<LoginClass> ListOfLogins = new List<LoginClass>();
+    public void Add(LoginClass lg)
+    {
+      ListOfLogins.Add(lg);
+    }
+    public string CheckLoginPassword(LoginClass lg)
+    {
+      foreach(LoginClass item in ListOfLogins)
+      {
+        if (lg.login == item.login)
+        {
+          if (lg.GetMD5(lg.password) == item.password)
+          {
+            return lg.GenToken();
+          }
+        }
+      }
+      return "";
+    }
+  }
+

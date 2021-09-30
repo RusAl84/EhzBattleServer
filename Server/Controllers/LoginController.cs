@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using EhzBattleServer.LoginClass;
+
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -30,16 +30,14 @@ namespace EhzBattleServer.Controllers
 
     // POST api/<LoginController>
     [HttpPost]
-    public string Post([FromBody] string value)
+    public string Post(LoginClass reciveData)
     {
-      //{ "login":"rusal","password":"123"}
+      //{ "login":"rusal","password":"123", "token":""}
       LoginClass lg = new() { login = "rusal", password = "123" };
-
-      string jsonstring = JsonConvert.SerializeObject(value);
-      Console.WriteLine(jsonstring);
       string CheckToken  = lg.GetMD5(lg.password);
       string token = lg.GenToken();
-      return value;
+      Console.WriteLine(reciveData);
+      //return value;
       return token;
     }
 
