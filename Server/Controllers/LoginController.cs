@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EhzBattleServer.LoginClass;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -33,7 +35,10 @@ namespace EhzBattleServer.Controllers
       //{ "login":"rusal","password":"123"}
       LoginClass lg = new() { login = "rusal", password = "123" };
 
-      string token = "secret code";
+      string jsonstring = JsonConvert.SerializeObject(value);
+      Console.WriteLine(jsonstring);
+      string CheckToken  = lg.GetMD5(lg.password);
+      string token = lg.GenToken();
       return value;
       return token;
     }
