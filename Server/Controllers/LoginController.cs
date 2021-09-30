@@ -23,7 +23,7 @@ namespace EhzBattleServer.Controllers
     [HttpGet("{id}")]
     public string Get(int id)
     {
-      return "value";
+      return "status";
     }
 
     // POST api/<LoginController>
@@ -32,16 +32,16 @@ namespace EhzBattleServer.Controllers
     {
     }
 
-    // PUT api/<LoginController>/5
-    [HttpPut("{id}")]
-    public void Put(int id, [FromBody] string value)
-    {
-    }
+    //// PUT api/<LoginController>/5
+    //[HttpPut("{id}")]
+    //public void Put(int id, [FromBody] string value)
+    //{
+    //}
 
-    // DELETE api/<LoginController>/5
-    [HttpDelete("{id}")]
-    public void Delete(int id)
-    {
-    }
+    //// DELETE api/<LoginController>/5
+    //[HttpDelete("{id}")]
+    //public void Delete(int id)
+    //{
+    //}
   }
 }
