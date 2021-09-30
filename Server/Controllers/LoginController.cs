@@ -28,8 +28,12 @@ namespace EhzBattleServer.Controllers
 
     // POST api/<LoginController>
     [HttpPost]
-    public void Post([FromBody] string value)
+    public string Post([FromBody] string value)
     {
+      //{ "login":"rusal","password":"123"}
+
+      string token = "secret code";
+      return token;
     }
 
     //// PUT api/<LoginController>/5
