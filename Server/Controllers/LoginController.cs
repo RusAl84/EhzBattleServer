@@ -12,17 +12,15 @@ namespace EhzBattleServer.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
+ 
   public class LoginController : ControllerBase
   {
     // POST api/<LoginController>
     [HttpPost]
     public string Post(LoginClass reciveData)
     {
-      //{ "login":"rusal","password":"123", "token":""}
-
-      string token = reciveData.GenToken(); /////
-      Console.WriteLine(reciveData);
-      //return value;
+      string token = Program.storedLogins.CheckLoginPassword(reciveData);
+      Console.WriteLine(Program.storedLogins);
       return token;
     }
   }

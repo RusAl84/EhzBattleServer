@@ -4,10 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
+using System.IO;
+using Newtonsoft.Json;
+
 namespace Login { 
   [Serializable]
   public  class LoginClass
   {
+    public string login { get; set; }
+    public string password { get; set; }
+    public string token;
+    public string timeStamp;
     public LoginClass(string _login, string _password)
     {
       this.login = _login;
@@ -16,9 +23,6 @@ namespace Login {
     public LoginClass()
     {
     }
-    public string login { get; set; }
-    public string password { get; set; }
-    public string token { get; set; }
     public static string GetMD5(string input)
     {
       // Use input string to calculate MD5 hash
@@ -60,40 +64,9 @@ namespace Login {
       byte[] key = Guid.NewGuid().ToByteArray();
       return  Convert.ToBase64String(time.Concat(key).ToArray());
     }
-
     public override string ToString()
     {
-      return String.Format($"login:{login} password:{password} token:{token}");
-    }
-  }
-  [Serializable]
-  public  class LoginMasClass
-  {
-    public List<LoginClass> ListOfLogins = new List<LoginClass>();
-    public void Add(LoginClass lg)
-    {
-      ListOfLogins.Add(lg);
-    }
-    public string CheckLoginPassword(LoginClass lg)
-    {
-      foreach(LoginClass item in ListOfLogins)
-      {
-        if (lg.login == item.login)
-        {
-          if (LoginClass.GetSHA256(lg.password) == item.password)
-          {
-            return lg.GenToken();
-          }
-        }
-      }
-      return "";
-    }
-    public override string ToString()
-    {
-      string str1 = "";
-      foreach (LoginClass item in ListOfLogins)
-        str1 += "\n" + item;
-      return str1;
+      return String.Format($"login:{login} password:{password} token:{token} timeStamp: {timeStamp}");
     }
   }
 }

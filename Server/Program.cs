@@ -14,38 +14,18 @@ namespace EhzBattleServer
 {
   public class Program
   {
-    public static string PasswordsFileName = "passwords_JSON.txt";
-    public static LoginMasClass storedLogins = new Login.LoginMasClass();
+    public static string LoginsFileName = "users.json";
+    public static LoginMasClass storedLogins = new Login.LoginMasClass(LoginsFileName);
+    public static s
 
-    public static void RegUser(string _login, string _password)
-    {
-      LoginClass lg = new LoginClass() { login = _login, 
-        password = LoginClass.GetSHA256(_password), 
-        token = "" };
-      storedLogins.Add(lg);
-      SaveLogins();
-     }
-    public static void LoadLogins()
-    {
-      string restoredJsonString = File.ReadAllText(PasswordsFileName);
-      storedLogins = JsonConvert.DeserializeObject<LoginMasClass>(restoredJsonString);
-    }
-    public static void SaveLogins()
-    {
-      string jsonString = JsonConvert.SerializeObject(storedLogins);
-      File.WriteAllText(PasswordsFileName, jsonString);
-    }
     public static void Main(string[] args)
     {
-      LoadLogins();
-      RegUser("kulvich1", "1234");
-      RegUser("kulvich2", "1234");
-      Console.WriteLine(storedLogins);
-      
-
-
-
+      storedLogins.LoadLogins();
+      //storedLogins.RegUser("kulvich", "1234");
+      //storedLogins.RegUser("rusal", "1234");
+      //Console.WriteLine(storedLogins);
       CreateHostBuilder(args).Build().Run();
+      storedLogins.SaveLogins();
     } 
 
     public static IHostBuilder CreateHostBuilder(string[] args) =>
