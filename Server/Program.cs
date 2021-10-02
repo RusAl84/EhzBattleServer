@@ -8,43 +8,40 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Login;
 
 namespace EhzBattleServer
 {
   public class Program
   {
     public static string PasswordsFileName = "passwords_JSON.txt";
-    public static LoginMasClass storedLogins = new LoginMasClass();
+    public static LoginMasClass storedLogins = new Login.LoginMasClass();
+
     public static void RegUser(string _login, string _password)
     {
-      LoginClass lg = new LoginClass() { login = _login, password = _password, token = "" };
-      string restoredJsonString = "";
-      using (StreamReader sr = new StreamReader(PasswordsFileName))
-      {
-        restoredJsonString = sr.ReadToEnd();
-      }
-      storedLogins = JsonConvert.DeserializeObject<LoginMasClass>(restoredJsonString);
+      LoginClass lg = new LoginClass() { login = _login, 
+        password = LoginClass.GetSHA256(_password), 
+        token = "" };
       storedLogins.Add(lg);
+      SaveLogins();
+     }
+    public static void LoadLogins()
+    {
+      string restoredJsonString = File.ReadAllText(PasswordsFileName);
+      storedLogins = JsonConvert.DeserializeObject<LoginMasClass>(restoredJsonString);
+    }
+    public static void SaveLogins()
+    {
       string jsonString = JsonConvert.SerializeObject(storedLogins);
-      //Console.WriteLine(jsonString);
-      try
-      {
-        using (StreamWriter sw = new StreamWriter(PasswordsFileName, false, System.Text.Encoding.Default))
-        {
-          sw.WriteLine(jsonString);
-        }
-      }
-      catch (Exception e)
-      {
-        Console.WriteLine(e.Message);
-      }
+      File.WriteAllText(PasswordsFileName, jsonString);
     }
     public static void Main(string[] args)
     {
-
-      //RegUser("Anya", "1234");
-
-
+      LoadLogins();
+      RegUser("kulvich1", "1234");
+      RegUser("kulvich2", "1234");
+      Console.WriteLine(storedLogins);
+      
 
 
 

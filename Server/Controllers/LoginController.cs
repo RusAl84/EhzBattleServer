@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using Login;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,20 +14,6 @@ namespace EhzBattleServer.Controllers
   [ApiController]
   public class LoginController : ControllerBase
   {
-    // GET: api/<LoginController>
-    [HttpGet]
-    public IEnumerable<string> Get()
-    {
-      return new string[] { "value1", "value2" };
-    }
-
-    //// GET api/<LoginController>/5
-    //[HttpGet("{id}")]
-    //public string Get(int id)
-    //{
-    //  return "status";
-    //}
-
     // POST api/<LoginController>
     [HttpPost]
     public string Post(LoginClass reciveData)
@@ -39,17 +25,5 @@ namespace EhzBattleServer.Controllers
       //return value;
       return token;
     }
-
-    //// PUT api/<LoginController>/5
-    //[HttpPut("{id}")]
-    //public void Put(int id, [FromBody] string value)
-    //{
-    //}
-
-    //// DELETE api/<LoginController>/5
-    //[HttpDelete("{id}")]
-    //public void Delete(int id)
-    //{
-    //}
   }
 }
