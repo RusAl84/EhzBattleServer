@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EhzBattleServer", "EhzBattleServer.csproj", "{CE9AD941-2809-4DBA-9A0F-C44244726B41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EhzBattleServer", "EhzBattleServer.csproj", "{CE9AD941-2809-4DBA-9A0F-C44244726B41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EhzClassLibrary", "..\Lib\EhzClassLibrary\EhzClassLibrary.csproj", "{02503C48-C6CC-4EEF-8E04-4E7F050A0C13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{CE9AD941-2809-4DBA-9A0F-C44244726B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE9AD941-2809-4DBA-9A0F-C44244726B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE9AD941-2809-4DBA-9A0F-C44244726B41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02503C48-C6CC-4EEF-8E04-4E7F050A0C13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02503C48-C6CC-4EEF-8E04-4E7F050A0C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02503C48-C6CC-4EEF-8E04-4E7F050A0C13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02503C48-C6CC-4EEF-8E04-4E7F050A0C13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

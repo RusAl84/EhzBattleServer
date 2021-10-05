@@ -16,7 +16,7 @@ namespace EhzBattleServer
   {
     public static string LoginsFileName = "users.json";
     public static LoginMasClass storedLogins = new Login.LoginMasClass(LoginsFileName);
-    public static s
+
 
     public static void Main(string[] args)
     {

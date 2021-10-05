@@ -8,7 +8,8 @@ namespace EhzBattleServer.Ezh
   public class EzhClass
   {
     string name;
-    string age;
-
+    int weapon;
+    int health;
+    int damange;
   }
 }

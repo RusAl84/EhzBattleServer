@@ -13,8 +13,8 @@ namespace Login {
   {
     public string login { get; set; }
     public string password { get; set; }
-    public string token;
-    public string timeStamp;
+    private string token;
+    private string timeStamp;
     public LoginClass(string _login, string _password)
     {
       this.login = _login;
