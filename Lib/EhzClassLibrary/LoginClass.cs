@@ -7,7 +7,8 @@ using System.Security.Cryptography;
 using System.IO;
 using Newtonsoft.Json;
 
-namespace Login { 
+namespace EhzClassLibrary
+{ 
   [Serializable]
   public  class LoginClass
   {
@@ -17,19 +18,22 @@ namespace Login {
     private DateTime timeStamp;
     public LoginClass(string _login, string _password)
     {
-      this.login = _login.ToLower();
+      this.login = _login;
       this.password = _password;
     }
     public LoginClass()
     {
     }
-
     public string GenToken()
     {
       byte[] time = BitConverter.GetBytes(DateTime.UtcNow.ToBinary());
       byte[] key = Guid.NewGuid().ToByteArray();
-      string token = Convert.ToBase64String(time.Concat(key).ToArray());
+      token = Convert.ToBase64String(time.Concat(key).ToArray());
       return  token;
+    }
+    public string GetToken()
+    {
+      return this.token;
     }
     public DateTime setTimeStamp() { 
       timeStamp = DateTime.Now;

@@ -80,6 +80,7 @@ namespace ClientWF
       this.loginButton.TabIndex = 8;
       this.loginButton.Text = "Регистрация";
       this.loginButton.UseVisualStyleBackColor = true;
+      this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
       // 
       // RegForm
       // 

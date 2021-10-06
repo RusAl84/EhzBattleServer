@@ -88,5 +88,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Lib\EhzClassLibrary\EhzClassLibrary.csproj">
+      <Project>{02503c48-c6cc-4eef-8e04-4e7f050a0c13}</Project>
+      <Name>EhzClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

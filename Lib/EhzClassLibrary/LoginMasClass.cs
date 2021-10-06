@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Login
+namespace EhzClassLibrary
 {
   [Serializable]
   public class LoginMasClass
@@ -17,7 +17,7 @@ namespace Login
     {
       LoginsFileName = _loginsFileName;
     }
-    public bool AddUser(LoginClass lg)
+    public bool AddUser(LoginClass lg, out string token)
     {
       bool existUser = false;
       foreach (LoginClass item in ListOfLogins)
@@ -27,12 +27,16 @@ namespace Login
       }
       if (!existUser)
       {
+        lg.setTimeStamp();
+        
+        token = lg.GenToken();
         ListOfLogins.Add(lg);
         return true;
       }
       else
       {
         Console.WriteLine($"Error login: {lg.login} already exists");
+        token = "";
         return false;
       }
         
@@ -53,16 +57,18 @@ namespace Login
       }
       return "";
     }
-    public void RegUser(string _login, string _password)
+    public string RegUser(string _login, string _password)
     {
-      LoginClass lg = new LoginClass()
+      LoginClass lg = new LoginClass(_login.ToLower(),
+                                      CryptClass.GetSHA256(_password));
+      if (AddUser(lg, out  string token))
       {
-        login = _login.ToLower(),
-        //password = LoginClass.GetSHA256(_password),        
-        password = CryptClass.GetSHA256(_password),
-      };
-      if (AddUser(lg))
         SaveLogins();
+        return token;
+      }
+      else
+        return "";
+
     }
     public void LoadLogins()
     {
@@ -74,7 +80,7 @@ namespace Login
     }
     public void SaveLogins()
     {
-      string jsonString = JsonConvert.SerializeObject(ListOfLogins,Formatting.Indented);
+      string jsonString = JsonConvert.SerializeObject(ListOfLogins, Formatting.Indented);
       File.WriteAllText(LoginsFileName, jsonString);
     }
     public override string ToString()
