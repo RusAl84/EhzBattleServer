@@ -16,7 +16,7 @@ namespace Login
     {
       LoginsFileName = _loginsFileName;
     }
-    public void AddUser(LoginClass lg)
+    public bool AddUser(LoginClass lg)
     {
       bool existUser = false;
       foreach (LoginClass item in ListOfLogins)
@@ -25,9 +25,16 @@ namespace Login
           existUser = true;
       }
       if (!existUser)
+      {
         ListOfLogins.Add(lg);
+        return true;
+      }
       else
+      {
         Console.WriteLine($"Error login: {lg.login} already exists");
+        return false;
+      }
+        
     }
     public string CheckLoginPassword(LoginClass lg)
     {
@@ -38,9 +45,8 @@ namespace Login
         {
           if (lg.password == ListOfLogins[i].password)
           {
-            ListOfLogins[i].token = lg.GenToken();
-            ListOfLogins[i].timeStamp = DateTime.Now.ToString();
-            return ListOfLogins[i].token;
+            ListOfLogins[i].setTimeStamp();
+            return ListOfLogins[i].GenToken();
           }
         }
       }
@@ -50,12 +56,11 @@ namespace Login
     {
       LoginClass lg = new LoginClass()
       {
-        login = _login,
+        login = _login.ToLower(),
         password = LoginClass.GetSHA256(_password),
-        token = ""
       };
-      AddUser(lg);
-      SaveLogins();
+      if (AddUser(lg))
+        SaveLogins();
     }
     public void LoadLogins()
     {
