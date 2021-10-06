@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using EhzClassLibrary;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -57,7 +58,8 @@ namespace Login
       LoginClass lg = new LoginClass()
       {
         login = _login.ToLower(),
-        password = LoginClass.GetSHA256(_password),
+        //password = LoginClass.GetSHA256(_password),        
+        password = CryptClass.GetSHA256(_password),
       };
       if (AddUser(lg))
         SaveLogins();
