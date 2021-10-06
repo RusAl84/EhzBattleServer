@@ -1,5 +1,4 @@
-﻿using EhzClassLibrary;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,17 +10,11 @@ using System.Windows.Forms;
 
 namespace ClienWF5
 {
-  public partial class Form1 : Form
+  public partial class RegForm : Form
   {
-    public Form1()
+    public RegForm()
     {
       InitializeComponent();
-    }
-
-    private void button1_Click(object sender, EventArgs e)
-    {
-      LoginClass lg = new LoginClass();
-      MessageBox.Show("GHb");
     }
   }
 }

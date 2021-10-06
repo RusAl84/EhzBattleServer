@@ -28,7 +28,6 @@ namespace EhzClassLibrary
       if (!existUser)
       {
         lg.setTimeStamp();
-        
         token = lg.GenToken();
         ListOfLogins.Add(lg);
         return true;

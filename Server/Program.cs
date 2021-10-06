@@ -1,3 +1,4 @@
+using EhzClassLibrary;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -8,14 +9,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Login;
+
 
 namespace EhzBattleServer
 {
   public class Program
   {
     public static string LoginsFileName = "users.json";
-    public static LoginMasClass storedLogins = new Login.LoginMasClass(LoginsFileName);
+    public static LoginMasClass storedLogins = new LoginMasClass(LoginsFileName);
 
 
     public static void Main(string[] args)
@@ -23,7 +24,7 @@ namespace EhzBattleServer
       storedLogins.LoadLogins();
       storedLogins.RegUser("Iliya", "1234");
       storedLogins.RegUser("rusal", "1234");
-      storedLogins.RegUser("Ulya", "1234");
+      storedLogins.RegUser("Nikita", "1234");
       Console.WriteLine(storedLogins);
       CreateHostBuilder(args).Build().Run();
       storedLogins.SaveLogins();
