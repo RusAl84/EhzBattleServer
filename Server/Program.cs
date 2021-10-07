@@ -22,9 +22,9 @@ namespace EhzBattleServer
     public static void Main(string[] args)
     {
       storedLogins.LoadLogins();
-      storedLogins.RegUser("Iliya", "1234");
+      storedLogins.RegUser("Yara", "1234");
       storedLogins.RegUser("rusal", "1234");
-      storedLogins.RegUser("Nikita", "1234");
+      storedLogins.RegUser("Sasha", "1234");
       Console.WriteLine(storedLogins);
       CreateHostBuilder(args).Build().Run();
       storedLogins.SaveLogins();

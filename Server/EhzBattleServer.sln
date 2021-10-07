@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EhzClassLibrary", "..\Lib\E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClienWF5", "..\ClienWF5\ClienWF5\ClienWF5.csproj", "{014E361C-6CAC-4277-B79D-D6F10DFBECED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTest", "..\ConsoleTest\ConsoleTest\ConsoleTest.csproj", "{A3D0695C-CB81-4143-A1CF-2F59BBDFE5AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{014E361C-6CAC-4277-B79D-D6F10DFBECED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{014E361C-6CAC-4277-B79D-D6F10DFBECED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{014E361C-6CAC-4277-B79D-D6F10DFBECED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3D0695C-CB81-4143-A1CF-2F59BBDFE5AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3D0695C-CB81-4143-A1CF-2F59BBDFE5AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3D0695C-CB81-4143-A1CF-2F59BBDFE5AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3D0695C-CB81-4143-A1CF-2F59BBDFE5AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
