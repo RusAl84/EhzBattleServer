@@ -29,12 +29,85 @@ namespace ClienWF5
     /// </summary>
     private void InitializeComponent()
     {
-      this.components = new System.ComponentModel.Container();
+      this.label2 = new System.Windows.Forms.Label();
+      this.label1 = new System.Windows.Forms.Label();
+      this.passwordtextBox2 = new System.Windows.Forms.TextBox();
+      this.loginTextBox = new System.Windows.Forms.TextBox();
+      this.loginButton = new System.Windows.Forms.Button();
+      this.SuspendLayout();
+      // 
+      // label2
+      // 
+      this.label2.AutoSize = true;
+      this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      this.label2.Location = new System.Drawing.Point(9, 151);
+      this.label2.Name = "label2";
+      this.label2.Size = new System.Drawing.Size(118, 38);
+      this.label2.TabIndex = 11;
+      this.label2.Text = "Пароль:";
+      // 
+      // label1
+      // 
+      this.label1.AutoSize = true;
+      this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      this.label1.Location = new System.Drawing.Point(9, 18);
+      this.label1.Name = "label1";
+      this.label1.Size = new System.Drawing.Size(101, 38);
+      this.label1.TabIndex = 10;
+      this.label1.Text = "Логин:";
+      // 
+      // passwordtextBox2
+      // 
+      this.passwordtextBox2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      this.passwordtextBox2.Location = new System.Drawing.Point(9, 192);
+      this.passwordtextBox2.MaxLength = 20;
+      this.passwordtextBox2.Name = "passwordtextBox2";
+      this.passwordtextBox2.PasswordChar = '*';
+      this.passwordtextBox2.Size = new System.Drawing.Size(312, 43);
+      this.passwordtextBox2.TabIndex = 9;
+      // 
+      // loginTextBox
+      // 
+      this.loginTextBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      this.loginTextBox.Location = new System.Drawing.Point(12, 59);
+      this.loginTextBox.MaxLength = 20;
+      this.loginTextBox.Name = "loginTextBox";
+      this.loginTextBox.Size = new System.Drawing.Size(312, 43);
+      this.loginTextBox.TabIndex = 8;
+      // 
+      // loginButton
+      // 
+      this.loginButton.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      this.loginButton.Location = new System.Drawing.Point(347, 166);
+      this.loginButton.Name = "loginButton";
+      this.loginButton.Size = new System.Drawing.Size(226, 69);
+      this.loginButton.TabIndex = 7;
+      this.loginButton.Text = "Регистрация";
+      this.loginButton.UseVisualStyleBackColor = false;
+      // 
+      // RegForm
+      // 
+      this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(800, 450);
-      this.Text = "RegForm";
+      this.ClientSize = new System.Drawing.Size(596, 268);
+      this.Controls.Add(this.label2);
+      this.Controls.Add(this.label1);
+      this.Controls.Add(this.passwordtextBox2);
+      this.Controls.Add(this.loginTextBox);
+      this.Controls.Add(this.loginButton);
+      this.Name = "RegForm";
+      this.Text = "ЁжБаттлеМультиплей: Регистрация";
+      this.ResumeLayout(false);
+      this.PerformLayout();
+
     }
 
     #endregion
+
+    private System.Windows.Forms.Label label2;
+    private System.Windows.Forms.Label label1;
+    private System.Windows.Forms.TextBox passwordtextBox2;
+    private System.Windows.Forms.TextBox loginTextBox;
+    private System.Windows.Forms.Button loginButton;
   }
 }

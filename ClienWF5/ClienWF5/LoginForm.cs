@@ -34,5 +34,10 @@ namespace ClienWF5
       RegForm rf = new RegForm();
       rf.ShowDialog();
     }
+
+    private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+    {
+      MessageBox.Show("Спроси Михалыча;)");
+    }
   }
 }
