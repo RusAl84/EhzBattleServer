@@ -82,6 +82,15 @@ namespace EhzClassLibrary
       string jsonString = JsonConvert.SerializeObject(ListOfLogins, Formatting.Indented);
       File.WriteAllText(LoginsFileName, jsonString);
     }
+    public string refreshToken(string oldToken)
+    {
+      LoginClass lg = new LoginClass(); 
+      int ind = ListOfLogins.FindIndex((LoginClass item) => item.GetToken() == oldToken);
+      if (ind>=0)
+        return ListOfLogins[ind].GenToken();
+      else
+        return "";
+    }
     public override string ToString()
     {
       string str1 = "";
