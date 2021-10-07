@@ -12,9 +12,20 @@ namespace ClienWF5
 {
   public partial class MainForm : Form
   {
+    public string token;
     public MainForm()
     {
       InitializeComponent();
+    }
+
+    private void MainForm_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    private void timer1_Tick(object sender, EventArgs e)
+    {
+      label2.Text = token;
     }
   }
 }

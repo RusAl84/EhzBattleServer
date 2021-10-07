@@ -8,10 +8,10 @@ namespace ConsoleTest
     static void Main(string[] args)
     {
       InventoryClass ic = new InventoryClass();
-      ic.setDataWeapons();
-      ic.saveDataWeapons();
-      ic.loadDataWeapons();
-      ic.saveDataWeapons();
+      ic.setData();
+      ic.saveData();
+      ic.loadData();
+      ic.saveData();
       //Console.WriteLine(File.ReadAllText(ic.InventoryFileName));
     }
   }

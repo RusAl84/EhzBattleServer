@@ -1,0 +1,70 @@
+{
+  "w1": {
+    "Item1": "weapon",
+    "Item2": "Кусь кусь без оружия;)",
+    "Item3": 1
+  },
+  "w2": {
+    "Item1": "weapon",
+    "Item2": "Золотые зубки",
+    "Item3": 2
+  },
+  "w3": {
+    "Item1": "weapon",
+    "Item2": "Ядовитые иголки",
+    "Item3": 3
+  },
+  "w4": {
+    "Item1": "weapon",
+    "Item2": "Ножик",
+    "Item3": 4
+  },
+  "w5": {
+    "Item1": "weapon",
+    "Item2": "HK MP5",
+    "Item3": 6
+  },
+  "w6": {
+    "Item1": "weapon",
+    "Item2": "АК-47",
+    "Item3": 8
+  },
+  "a1": {
+    "Item1": "armor",
+    "Item2": "обычная шкура",
+    "Item3": 0
+  },
+  "a2": {
+    "Item1": "armor",
+    "Item2": "засохшая грязь",
+    "Item3": 1
+  },
+  "a3": {
+    "Item1": "armor",
+    "Item2": "бронижелет",
+    "Item3": 2
+  },
+  "a4": {
+    "Item1": "armor",
+    "Item2": "силовая броня",
+    "Item3": 4
+  },
+  "i1": {
+    "Item1": "item",
+    "Item2": "малый элексир",
+    "Item3": 15
+  },
+  "i2": {
+    "Item1": "item",
+    "Item2": "большой элексир",
+    "Item3": 30
+  },
+  "i3": {
+    "Item1": "item",
+    "Item2": "озверин"
+  },
+  "i4": {
+    "Item1": "item",
+    "Item2": "убежище"
+  }
+}

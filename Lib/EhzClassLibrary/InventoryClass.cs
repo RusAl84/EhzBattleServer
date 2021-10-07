@@ -10,45 +10,48 @@ namespace EhzClassLibrary
   [Serializable]
   public class InventoryClass
   {
-    public string InventoryFileName = "weapons.json";
-    //class defItem
-    //{
-    //  public string name;
-    //  public int value;
-    //}
-    Dictionary<string, object> weapons = new Dictionary<string, object>();
-    //Dictionary<string, defItem> armors = new Dictionary<string, defItem>();
-    //Dictionary<string, defItem> items = new Dictionary<string, defItem>();
-    // Фляга с лекарством
-    // Озверин (2й урон)
-    // Обезболивающее
-
-
-
-
-    public void loadDataWeapons()
+    public string InventoryFileName = "..\\items.json";
+    Dictionary<string, object> items = new Dictionary<string, object>();
+    public void loadData()
     {
       if (File.Exists(InventoryFileName))
       {
         string restoredJsonString = File.ReadAllText(InventoryFileName);
-        this.weapons = JsonConvert.DeserializeObject<Dictionary<string, object>>(restoredJsonString);
+        this.items = JsonConvert.DeserializeObject<Dictionary<string, object>>(restoredJsonString);
       }
     }
-    public void saveDataWeapons()
+    public void saveData()
     {
-      string jsonString = JsonConvert.SerializeObject(weapons, Formatting.Indented);
+      string jsonString = JsonConvert.SerializeObject(items, Formatting.Indented);
       File.WriteAllText(InventoryFileName, jsonString);
     }
-    public void setDataWeapons()
+    public void setData()
     {
-      weapons["w1"] = ("weapon", "Кусь кусь без оружия;)", 1);
-      weapons["w2"] = ("weapon", "Золотые зубки", 2);
-      weapons["w3"] = ("weapon", "Ядовитые иголки", 3);
-      weapons["w4"] = ("weapon", "Ножик", 4);
-      weapons["w5"] = ("weapon", "HK MP5", 6);
-      weapons["w6"] = ("weapon", "АК-47", 8);
+      items["w1"] = ("weapon", "Кусь кусь без оружия;)", 1);
+      items["w2"] = ("weapon", "Золотые зубки", 2);
+      items["w3"] = ("weapon", "Ядовитые иголки", 3);
+      items["w4"] = ("weapon", "Ножик", 4);
+      items["w5"] = ("weapon", "HK MP5", 6);
+      items["w6"] = ("weapon", "АК-47", 8);
+      items["a1"] = ("armor", "обычная шкура", 0);
+      items["a2"] = ("armor", "засохшая грязь", 1);
+      items["a3"] = ("armor", "бронижелет", 2);
+      items["a4"] = ("armor", "экзо-скелет", 3);
+      items["a4"] = ("armor", "силовая броня", 4);
+      items["i1"] = ("item", "малый элексир", 15);
+      items["i2"] = ("item", "большой элексир", 30);
+      items["i3"] = ("item", "озверин");
+      items["i4"] = ("item", "убежище");
+
+
+      // Фляга с лекарством
+      // Озверин (2й урон)
+      // Обезболивающее
+
+
+
     }
-  
+
 
   }
 }

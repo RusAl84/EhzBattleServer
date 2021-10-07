@@ -29,6 +29,7 @@ namespace ClienWF5
     /// </summary>
     private void InitializeComponent()
     {
+      this.components = new System.ComponentModel.Container();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
       this.pictureBox1 = new System.Windows.Forms.PictureBox();
       this.listBox1 = new System.Windows.Forms.ListBox();
@@ -36,6 +37,7 @@ namespace ClienWF5
       this.button1 = new System.Windows.Forms.Button();
       this.listBox2 = new System.Windows.Forms.ListBox();
       this.label2 = new System.Windows.Forms.Label();
+      this.timer1 = new System.Windows.Forms.Timer(this.components);
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
       this.SuspendLayout();
       // 
@@ -93,6 +95,11 @@ namespace ClienWF5
       this.label2.TabIndex = 5;
       this.label2.Text = "Время до следующего хода:";
       // 
+      // timer1
+      // 
+      this.timer1.Enabled = true;
+      this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+      // 
       // MainForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -106,6 +113,7 @@ namespace ClienWF5
       this.Controls.Add(this.pictureBox1);
       this.Name = "MainForm";
       this.Text = "MainForm";
+      this.Load += new System.EventHandler(this.MainForm_Load);
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
@@ -120,5 +128,6 @@ namespace ClienWF5
     private System.Windows.Forms.Button button1;
     private System.Windows.Forms.ListBox listBox2;
     private System.Windows.Forms.Label label2;
+    private System.Windows.Forms.Timer timer1;
   }
 }

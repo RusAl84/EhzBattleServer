@@ -16,6 +16,7 @@ namespace EhzClassLibrary
     public string password { get; set; }
     private string token;
     private DateTime timeStamp;
+    private bool Turn;
     public LoginClass(string _login, string _password)
     {
       this.login = _login;
@@ -26,7 +27,7 @@ namespace EhzClassLibrary
     }
     public string GenToken()
     {
-      string salt = "СОЛЬЧТОБЫ НИКТО";
+      string salt = "СОЛЬ ЧТОБЫ НИКТО";
       byte[] time = BitConverter.GetBytes(DateTime.UtcNow.ToBinary());
       byte[] key = Guid.NewGuid().ToByteArray();
       token = Convert.ToBase64String(time.Concat(key).ToArray());
