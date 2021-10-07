@@ -57,6 +57,7 @@ namespace ClienWF5
       this.loginTextBox.Name = "loginTextBox";
       this.loginTextBox.Size = new System.Drawing.Size(312, 43);
       this.loginTextBox.TabIndex = 1;
+      this.loginTextBox.Text = "RusAl";
       // 
       // passwordTextBox
       // 
@@ -67,6 +68,7 @@ namespace ClienWF5
       this.passwordTextBox.PasswordChar = '*';
       this.passwordTextBox.Size = new System.Drawing.Size(312, 43);
       this.passwordTextBox.TabIndex = 2;
+      this.passwordTextBox.Text = "1234";
       // 
       // label1
       // 
@@ -126,7 +128,7 @@ namespace ClienWF5
       this.Controls.Add(this.loginTextBox);
       this.Controls.Add(this.loginButton);
       this.Name = "LoginForm";
-      this.Text = "Вход в систему";
+      this.Text = "ЁжБаттлеМультиплей: Вход в системы";
       this.ResumeLayout(false);
       this.PerformLayout();
 

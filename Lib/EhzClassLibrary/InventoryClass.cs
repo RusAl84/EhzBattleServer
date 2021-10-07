@@ -41,12 +41,12 @@ namespace EhzClassLibrary
     }
     public void setDataWeapons()
     {
-      weapons["w1"] = ("Кусь кусь без оружия;)", 1);
-      weapons["w2"] = ("Золотые зубки", 2);
-      weapons["w3"] = ("Ядовитые иголки", 3);
-      weapons["w4"] = ("Ножик", 4);
-      weapons["w5"] = ("HK MP5", 6);
-      weapons["w6"] = ("АК-47", 8);
+      weapons["w1"] = ("weapon", "Кусь кусь без оружия;)", 1);
+      weapons["w2"] = ("weapon", "Золотые зубки", 2);
+      weapons["w3"] = ("weapon", "Ядовитые иголки", 3);
+      weapons["w4"] = ("weapon", "Ножик", 4);
+      weapons["w5"] = ("weapon", "HK MP5", 6);
+      weapons["w6"] = ("weapon", "АК-47", 8);
     }
   
 

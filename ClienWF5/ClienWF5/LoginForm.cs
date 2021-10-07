@@ -21,7 +21,11 @@ namespace ClienWF5
     private void button1_Click(object sender, EventArgs e)
     {
       LoginClass lg = new LoginClass();
-      MessageBox.Show("GHb");
+      MainForm mf = new MainForm();
+      this.Hide();
+      mf.ShowDialog();
+      
+      this.Show();
     }
 
     private void label2_Click(object sender, EventArgs e)

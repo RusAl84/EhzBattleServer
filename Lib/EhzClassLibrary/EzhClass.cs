@@ -5,11 +5,12 @@ using System.Threading.Tasks;
 
 namespace EhzClassLibrary
 {
+  [Serializable]
   public class EzhClass
   {
-    public string name;
-    public int health;
-    public string armor;
-    public string weapon;
+    public string name { get; set;  }
+    public int health { get; set; }
+    public string armor { get; set; }
+    public string weapon { get; set; }
   }
 }
