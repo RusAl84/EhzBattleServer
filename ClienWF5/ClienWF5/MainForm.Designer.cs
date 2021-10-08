@@ -41,7 +41,7 @@ namespace ClienWF5
       this.label3 = new System.Windows.Forms.Label();
       this.listBox1 = new System.Windows.Forms.ListBox();
       this.label4 = new System.Windows.Forms.Label();
-      this.labelRoundTime = new System.Windows.Forms.Label();
+      this.roundTimeLabel = new System.Windows.Forms.Label();
       this.label5 = new System.Windows.Forms.Label();
       this.label6 = new System.Windows.Forms.Label();
       this.label7 = new System.Windows.Forms.Label();
@@ -135,15 +135,15 @@ namespace ClienWF5
       this.label4.TabIndex = 8;
       this.label4.Text = "Взять вещь:";
       // 
-      // labelRoundTime
+      // roundTimeLabel
       // 
-      this.labelRoundTime.AutoSize = true;
-      this.labelRoundTime.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-      this.labelRoundTime.Location = new System.Drawing.Point(474, 46);
-      this.labelRoundTime.Name = "labelRoundTime";
-      this.labelRoundTime.Size = new System.Drawing.Size(45, 54);
-      this.labelRoundTime.TabIndex = 9;
-      this.labelRoundTime.Text = "0";
+      this.roundTimeLabel.AutoSize = true;
+      this.roundTimeLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      this.roundTimeLabel.Location = new System.Drawing.Point(474, 46);
+      this.roundTimeLabel.Name = "roundTimeLabel";
+      this.roundTimeLabel.Size = new System.Drawing.Size(45, 54);
+      this.roundTimeLabel.TabIndex = 9;
+      this.roundTimeLabel.Text = "0";
       // 
       // label5
       // 
@@ -180,7 +180,7 @@ namespace ClienWF5
       this.Controls.Add(this.label7);
       this.Controls.Add(this.label6);
       this.Controls.Add(this.label5);
-      this.Controls.Add(this.labelRoundTime);
+      this.Controls.Add(this.roundTimeLabel);
       this.Controls.Add(this.label4);
       this.Controls.Add(this.listBox1);
       this.Controls.Add(this.label3);
@@ -211,7 +211,7 @@ namespace ClienWF5
     private System.Windows.Forms.Label label3;
     private System.Windows.Forms.ListBox listBox1;
     private System.Windows.Forms.Label label4;
-    private System.Windows.Forms.Label labelRoundTime;
+    private System.Windows.Forms.Label roundTimeLabel;
     private System.Windows.Forms.Label label5;
     private System.Windows.Forms.Label label6;
     private System.Windows.Forms.Label label7;

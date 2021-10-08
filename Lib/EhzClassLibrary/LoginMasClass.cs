@@ -86,7 +86,7 @@ namespace EhzClassLibrary
     {
       LoginClass lg = new LoginClass(); 
       int ind = ListOfLogins.FindIndex((LoginClass item) => item.GetToken() == oldToken);
-      if (ind>=0)
+      if (ind >= 0)
         return ListOfLogins[ind].GenToken();
       else
         return "";

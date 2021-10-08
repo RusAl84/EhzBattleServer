@@ -47,6 +47,7 @@ namespace ClienWF5
       //MessageBox.Show(strdata);
       MainForm mf = new MainForm();
       mf.token = strdata;
+      mf.baseUrl = baseUrl;
       this.Hide();
       mf.ShowDialog();
       this.Show();
