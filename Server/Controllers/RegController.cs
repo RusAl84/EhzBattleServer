@@ -17,6 +17,7 @@ namespace EhzBattleServer.Controllers
     [HttpPost]
     public string Post(LoginClass reciveData)
     {
+      
       string token = Program.storedLogins.RegUser(reciveData.login, reciveData.password);
       Console.WriteLine(Program.storedLogins);
       return token;

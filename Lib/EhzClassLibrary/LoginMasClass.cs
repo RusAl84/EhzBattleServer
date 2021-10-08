@@ -59,7 +59,7 @@ namespace EhzClassLibrary
     public string RegUser(string _login, string _password)
     {
       LoginClass lg = new LoginClass(_login.ToLower(),
-                                      CryptClass.GetSHA256(_password));
+                                      _password);  //! уже в SHA256
       if (AddUser(lg, out  string token))
       {
         SaveLogins();
