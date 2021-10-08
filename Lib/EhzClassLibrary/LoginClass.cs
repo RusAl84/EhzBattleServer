@@ -16,7 +16,7 @@ namespace EhzClassLibrary
     public string password { get; set; }
     private string token;
     private DateTime timeStamp;
-    private bool Turn;
+    private bool turn;
     public LoginClass(string _login, string _password)
     {
       this.login = _login;
