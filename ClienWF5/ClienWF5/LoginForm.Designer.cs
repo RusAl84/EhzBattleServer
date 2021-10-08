@@ -41,7 +41,7 @@ namespace ClienWF5
       // loginButton
       // 
       this.loginButton.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-      this.loginButton.Location = new System.Drawing.Point(359, 113);
+      this.loginButton.Location = new System.Drawing.Point(359, 128);
       this.loginButton.Name = "loginButton";
       this.loginButton.Size = new System.Drawing.Size(168, 69);
       this.loginButton.TabIndex = 0;
@@ -95,7 +95,7 @@ namespace ClienWF5
       // 
       this.linkLabel1.AutoSize = true;
       this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-      this.linkLabel1.Location = new System.Drawing.Point(12, 216);
+      this.linkLabel1.Location = new System.Drawing.Point(13, 228);
       this.linkLabel1.Name = "linkLabel1";
       this.linkLabel1.Size = new System.Drawing.Size(208, 37);
       this.linkLabel1.TabIndex = 5;
