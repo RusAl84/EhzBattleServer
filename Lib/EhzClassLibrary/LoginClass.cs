@@ -16,7 +16,19 @@ namespace EhzClassLibrary
     public string password { get; set; }
     private string token;
     private DateTime timeStamp;
+    private DateTime elapsedRoundTime;
     private bool round;
+    public void UpdateElapsedRoundTime(DateTime _eRT, bool _round)
+    {
+      elapsedRoundTime = _eRT;
+      round = _round;
+    }
+
+    public string getElapsedTime()
+    {
+      elapsedRoundTime.ToString("mm:ss");
+      return elapsedRoundTime.ToString("mm:ss"); ;
+    }
     public LoginClass(string _login, string _password)
     {
       this.login = _login;

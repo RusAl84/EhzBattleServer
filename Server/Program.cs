@@ -18,9 +18,17 @@ namespace EhzBattleServer
   {
     public static string LoginsFileName = "users.json";
     public static LoginMasClass storedLogins = new LoginMasClass(LoginsFileName);
-    public static DateTime freezTime;
-    public const int roundInterval = 5;
+    public static DateTime freezTime; // время когда заканчивается ход
+    public const int roundInterval = 60;
+    public void UpdateElapsedRoundTime()
+    {
      
+      TimeSpan difTime = freezTime.Subtract(DateTime.Now);
+      DateTime elTime = freezTime.AddSeconds(Program.roundInterval);
+      for(int i=0; i<LoginMasClass.)
+      elTime.Subtract(DateTime.Now)
+
+    }
 
 
     public static void Main(string[] args)

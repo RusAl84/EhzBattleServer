@@ -69,6 +69,15 @@ namespace EhzClassLibrary
         return "";
 
     }
+    public string getLoginByToken(string _token)
+    {
+      foreach(LoginClass item in ListOfLogins)
+      {
+        if (item.GetToken() == _token)
+          return item.login;
+       }
+      return "";
+    }
     public void LoadLogins()
     {
       if (File.Exists(LoginsFileName))

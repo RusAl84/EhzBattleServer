@@ -18,10 +18,7 @@ namespace EhzBattleServer.Controllers
     {
       //string json = JsonConvert.SerializeObject(result);
 
-      //string jsonString = DateTime.Now.Subtract(Program.freezTime).TotalSeconds.ToString();
-      string jsonString = Program.freezTime.Subtract(DateTime.Now).TotalSeconds.ToString();
-      TimeSpan difTime = Program.freezTime.Subtract(DateTime.Now);
-
+      string jsonString = DateTime.Now.Subtract(Program.freezTime).TotalSeconds.ToString();
 
       return jsonString;
     }
