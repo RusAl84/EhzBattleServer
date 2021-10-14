@@ -19,7 +19,7 @@ namespace EhzBattleServer
     public static string LoginsFileName = "users.json";
     public static LoginMasClass storedLogins = new LoginMasClass(LoginsFileName);
     public static DateTime freezTime;
-    public const int roundInterval = 3;
+    public const int roundInterval = 5;
      
 
 
