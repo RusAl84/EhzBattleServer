@@ -45,6 +45,7 @@ namespace ClienWF5
       this.label5 = new System.Windows.Forms.Label();
       this.label6 = new System.Windows.Forms.Label();
       this.label7 = new System.Windows.Forms.Label();
+      this.label8 = new System.Windows.Forms.Label();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
       this.SuspendLayout();
       // 
@@ -148,7 +149,7 @@ namespace ClienWF5
       // label5
       // 
       this.label5.AutoSize = true;
-      this.label5.Location = new System.Drawing.Point(312, 373);
+      this.label5.Location = new System.Drawing.Point(369, 394);
       this.label5.Name = "label5";
       this.label5.Size = new System.Drawing.Size(89, 20);
       this.label5.TabIndex = 10;
@@ -157,7 +158,7 @@ namespace ClienWF5
       // label6
       // 
       this.label6.AutoSize = true;
-      this.label6.Location = new System.Drawing.Point(407, 373);
+      this.label6.Location = new System.Drawing.Point(474, 394);
       this.label6.Name = "label6";
       this.label6.Size = new System.Drawing.Size(61, 20);
       this.label6.TabIndex = 11;
@@ -166,17 +167,27 @@ namespace ClienWF5
       // label7
       // 
       this.label7.AutoSize = true;
-      this.label7.Location = new System.Drawing.Point(398, 444);
+      this.label7.Location = new System.Drawing.Point(374, 360);
       this.label7.Name = "label7";
       this.label7.Size = new System.Drawing.Size(89, 20);
       this.label7.TabIndex = 12;
       this.label7.Text = "Имя ёжика:";
+      // 
+      // label8
+      // 
+      this.label8.AutoSize = true;
+      this.label8.Location = new System.Drawing.Point(469, 360);
+      this.label8.Name = "label8";
+      this.label8.Size = new System.Drawing.Size(50, 20);
+      this.label8.TabIndex = 13;
+      this.label8.Text = "label8";
       // 
       // MainForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(1131, 547);
+      this.Controls.Add(this.label8);
       this.Controls.Add(this.label7);
       this.Controls.Add(this.label6);
       this.Controls.Add(this.label5);
@@ -215,5 +226,6 @@ namespace ClienWF5
     private System.Windows.Forms.Label label5;
     private System.Windows.Forms.Label label6;
     private System.Windows.Forms.Label label7;
+    private System.Windows.Forms.Label label8;
   }
 }

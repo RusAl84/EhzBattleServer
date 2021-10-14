@@ -30,7 +30,7 @@ namespace ClienWF5
 
     private void timer1_Tick(object sender, EventArgs e)
     {
-      label2.Text = token;
+      label8.Text = token;
       string url = baseUrl + "/api/GetData";
       var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
       HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);

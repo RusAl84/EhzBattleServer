@@ -27,7 +27,7 @@ namespace EhzClassLibrary
     }
     public string GenToken()
     {
-      string salt = "СОЛЬ ЧТОБЫ НИКТО";
+      string salt = "СОЛЬ ЧТОБЫ НИКТО НЕ ДОГАДАЛСЯ;)";
       byte[] time = BitConverter.GetBytes(DateTime.UtcNow.ToBinary());
       byte[] key = Guid.NewGuid().ToByteArray();
       token = Convert.ToBase64String(time.Concat(key).ToArray());
